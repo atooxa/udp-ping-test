@@ -10,7 +10,7 @@ socket.on('listening', () => {
 });
 
 socket.on('message', (message, remote) => {
-  console.log(`Message from: ${remote.address}:${remote.port} - ${message}`);
+  //console.log(`Message from: ${remote.address}:${remote.port} - ${message}`);
 
   socket.send(JSON.stringify({ message: 'Hello client' }), remote.port, remote.address);
 });

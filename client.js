@@ -16,6 +16,8 @@ function sendMessageToServer(message) {
   socket.send(JSON.stringify(message), PORT, HOST, (err) => {
     if (err) return console.error(err);
 
+    console.log(`Message sent.`);
+
     sentTimestamp = Date.now();
   });
 }
